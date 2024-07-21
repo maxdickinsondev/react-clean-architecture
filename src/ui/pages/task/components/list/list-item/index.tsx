@@ -13,7 +13,7 @@ export function ListItem({
         type="checkbox"
         className="w-4 h-4 cursor-pointer"
         checked={checked}
-        onClick={onCheckItem}
+        onChange={onCheckItem}
       />
       <span className={`w-full ${checked && "line-through"}`}>{title}</span>
       <TrashIcon

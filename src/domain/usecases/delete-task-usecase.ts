@@ -1,11 +1,13 @@
 import { HttpResponse } from "../../presentation/protocols/http";
-import { TaskService } from "../contracts/services/task-service-contract";
+import {
+  TaskResponse,
+  TaskService,
+} from "../contracts/services/task-service-contract";
 import { UseCase } from "../contracts/usecases/usecase-contract";
-import { Task } from "../entities/task";
 
 export namespace DeleteTaskUseCase {
   export type Params = { id: number };
-  export type Result = Promise<HttpResponse<Task>>;
+  export type Result = Promise<HttpResponse<TaskResponse>>;
 }
 
 export const deleteTaskUseCase = (taskService: TaskService): UseCase => ({

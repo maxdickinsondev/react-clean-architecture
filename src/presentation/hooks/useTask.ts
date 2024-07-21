@@ -25,8 +25,7 @@ export function useTask() {
   async function onGetTasks() {
     try {
       const response = await getTasksUseCase.execute();
-      // @ts-ignore
-      setTasks(response.body.tasks || []);
+      setTasks(response?.body?.tasks || []);
     } catch (err) {
       console.error(err);
     }
