@@ -35,24 +35,28 @@ export function useTask() {
   async function onCreateTask(data: Task) {
     try {
       await createTaskUseCase.execute(data);
+      onClearTask();
       await onGetTasks();
     } catch (err) {
       console.error(err);
     }
   }
 
-  async function onUpdateTask() {
+  async function onUpdateTask(id: number, data: Task) {
     try {
-      await updateTaskUseCase.execute();
+      await updateTaskUseCase.execute({
+        id,
+        data: { ...data, completed: !data.completed },
+      });
       await onGetTasks();
     } catch (err) {
       console.error(err);
     }
   }
 
-  async function onDeleteTask() {
+  async function onDeleteTask(id: number) {
     try {
-      await deleteTaskUseCase.execute();
+      await deleteTaskUseCase.execute({ id });
       await onGetTasks();
     } catch (err) {
       console.error(err);
