@@ -14,7 +14,10 @@ export function Task() {
   } = useTask();
 
   return (
-    <main className="h-screen bg-slate-200 flex items-center flex-col">
+    <main
+      role="main"
+      className="h-screen bg-slate-200 flex items-center flex-col"
+    >
       <div className="mt-40 w-full max-w-screen-md px-4">
         <div className="mb-10">
           <Form
