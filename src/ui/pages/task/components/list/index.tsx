@@ -4,7 +4,7 @@ import { ListProps } from "./types";
 export function List({ data, onUpdateItem, onDeleteItem }: ListProps) {
   return (
     <>
-      <ul className="space-y-2">
+      <ul data-testid="list" className="space-y-2">
         {data.map((item) => (
           <div key={item.id} className="w-full flex flex-row justify-between">
             <ListItem
