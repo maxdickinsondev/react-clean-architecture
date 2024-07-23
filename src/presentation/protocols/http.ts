@@ -1,17 +1,17 @@
 export type HttpMethod = "get" | "post" | "put" | "delete";
 
-export interface HttpRequest<T = any, K = any> {
+export interface HttpRequest {
   url: string;
   method: HttpMethod;
-  body?: T;
-  headers?: K;
+  body?: any;
+  headers?: any;
 }
 
-export interface HttpResponse<T> {
+export interface HttpResponse<T = any> {
   statusCode: number;
   body?: T;
 }
 
-export interface HttpClient<T = any, K = any> {
-  request<R>(request: HttpRequest<T, K>): Promise<HttpResponse<R>>;
+export interface HttpClient {
+  request<T = any>(request: HttpRequest): Promise<HttpResponse<T>>;
 }
