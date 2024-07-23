@@ -3,22 +3,22 @@ import {
   TaskResponse,
   TaskService,
 } from "../../../src/domain/contracts/services/task-service-contract";
-import { createTaskUseCase } from "../../../src/domain/usecases/create-task-usecase";
+import { deleteTaskUseCase } from "../../../src/domain/usecases/delete-task-usecase";
 import { HttpResponse } from "../../../src/presentation/protocols/http";
 
-describe("CreateTaskUseCase", () => {
-  it("should be create a task", async () => {
+describe("UpdateTaskUseCase", () => {
+  it("should be delete a task", async () => {
     const mockTaskService = mock<TaskService>();
 
     const mockResponse: HttpResponse<TaskResponse> = {
       statusCode: 200,
       body: { id: 1, title: "Learn Jest", completed: true },
     };
-    mockTaskService.createTask.mockResolvedValue(mockResponse);
+    mockTaskService.deleteTask.mockResolvedValue(mockResponse);
 
-    const taskUseCase = createTaskUseCase(mockTaskService);
+    const taskUseCase = deleteTaskUseCase(mockTaskService);
 
-    const task = await taskUseCase.execute({ title: "Learn Docker" });
+    const task = await taskUseCase.execute({ id: 1, title: "Learn Docker" });
 
     expect(task.body).toStrictEqual({
       id: 1,
