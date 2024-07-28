@@ -12,8 +12,8 @@ export const axiosHttpClient: HttpClient = {
       headers,
     });
     return {
-      body: response.data,
-      statusCode: response.status,
+      body: response?.data,
+      statusCode: response?.status,
     };
   },
 };
