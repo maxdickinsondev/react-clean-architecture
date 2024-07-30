@@ -2,7 +2,7 @@
 
 ## Diagrama Arquitetural
 
-Este projeto demonstra como aplicar os princípios da Clean Architecture em uma aplicação React. A Clean Architecture é uma abordagem de design de software que enfatiza a separação de preocupações, promovendo a manutenibilidade, testabilidade e escalabilidade do código.
+Este projeto demonstra como aplicar os princípios da arquitetura limpa em uma aplicação React. A arquitetura limpa é uma abordagem de design de software que enfatiza a separação de preocupações, promovendo a manutenibilidade, testabilidade e escalabilidade do código.
 
 ![](./public/clean.png)
 
