@@ -1,4 +1,4 @@
-# Clean Architecture React
+# React Clean Architecture
 
 ## Diagrama Arquitetural
 
