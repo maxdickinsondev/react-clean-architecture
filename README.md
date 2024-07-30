@@ -31,6 +31,12 @@ Este projeto demonstra como aplicar os princípios da arquitetura limpa em uma a
   - **organisms**: Componentes ainda mais complexos formados pela combinação de molecules.
   - **templates**: Estruturas de layout que combinam organisms.
   - **pages**: Páginas da aplicação.
+ 
+## Padrões de design
+
+- Gateway
+- Factory
+- Dependency Injection
 
 ## Começando
 
