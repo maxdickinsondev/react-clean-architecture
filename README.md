@@ -44,7 +44,7 @@ Este projeto demonstra como aplicar os princípios da Clean Architecture em uma 
 Clone o repositório e instale as dependências:
 
 ```
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/maxdickinsondev/react-clean-architecture.git
+cd react-clean-architecture
 npm install
 ````
