@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Clean Architecture React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Architecture Diagram
 
 In the project directory, you can run:
+
+![](./public/clean.png)
 
 ### `yarn start`
 
