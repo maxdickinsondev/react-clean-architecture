@@ -1,46 +1,50 @@
 # Clean Architecture React
 
-## Architecture Diagram
+## Diagrama Arquitetural
 
-In the project directory, you can run:
+Este projeto demonstra como aplicar os princípios da Clean Architecture em uma aplicação React. A Clean Architecture é uma abordagem de design de software que enfatiza a separação de preocupações, promovendo a manutenibilidade, testabilidade e escalabilidade do código.
 
 ![](./public/clean.png)
 
-### `yarn start`
+## Estrutura de pastas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **domain**: Contém as regras de negócio e lógica da aplicação.
+  - **contracts**: Interfaces e contratos usados no domínio.
+  - **entities**: Entidades de negócio da aplicação.
+  - **usecases**: Casos de uso que orquestram a lógica de negócio.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **infrastructure**: Implementações concretas de interfaces e detalhes de infraestrutura.
+  - **http**: Configurações e implementações de comunicação HTTP.
+  - **services**: Serviços de infraestrutura, como APIs externas.
 
-### `yarn test`
+- **main**: Ponto de entrada da aplicação e configuração de dependências.
+  - **factories**: Fábricas para criar instâncias de casos de uso, serviços e configurações HTTP.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **presentation**: Camada de apresentação e lógica de interface com o usuário.
+  - **hooks**: Custom hooks utilizados na apresentação.
+  - **protocols**: Protocolos e contratos para comunicação na camada de apresentação.
+  - **routes**: Definição das rotas da aplicação.
 
-### `yarn build`
+- **ui**: Componentes visuais e layout da aplicação.
+  - **atoms**: Componentes básicos e reutilizáveis.
+  - **molecules**: Combinações de átomos para formar componentes mais complexos.
+  - **organisms**: Componentes ainda mais complexos formados pela combinação de molecules.
+  - **templates**: Estruturas de layout que combinam organisms.
+  - **pages**: Páginas da aplicação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Começando
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js
+- npm ou yarn
 
-### `yarn eject`
+### Instalação
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone o repositório e instale as dependências:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+npm install
+````
